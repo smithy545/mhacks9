@@ -1,6 +1,7 @@
 import requests
 import json
 
+# I'm helping
 customerId = 'your customerId here'
 apiKey = '6ef5c6d1654869455435f792cf9c0712'
 
