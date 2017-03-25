@@ -10,15 +10,25 @@
 
 <script type="text/javascript">
 	// setup bootstrap formatting
-	$('form > label').each(function(i) {
-		var label = $(this).next('input'),
-			br = label.next('br'),
-			span = br.next('span');
-		$(this).add(label)
-		.add(br)
-		.add(span)
-		.wrapAll('<div class="form-group">');
+	function mergejQueryObjects(arrayOfJqueryObjects) {
+        return $($.map(arrayOfJqueryObjects, function (el) {
+            return el.get();
+        }));
+    }
+	$('form label').each(function() {
+		var next, elements = [$(this)];
+		do {
+			if(next) {
+				next = $(next[0]).next();
+			} else {
+				next = $(this).next();
+			}
+			elements.push($(next));
+		} while(next[0].nodeName != 'SPAN');
+
+		mergejQueryObjects(elements).wrapAll('<div class="form-group">');
 	});
+
 </script>
 
 {% endblock %}
