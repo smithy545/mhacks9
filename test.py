@@ -4,7 +4,8 @@ import json
 # I'm helping
 apiKey = '6ef5c6d1654869455435f792cf9c0712'
 
-url = 'http://api.reimaginebanking.com/customers?key={}'.format(apiKey)
+customerId = "58d5f6241756fc834d9064c3"
+url = 'http://api.reimaginebanking.com/customers/{}?key={}'.format(apiKey)
 payload = {
     'first_name': 'Peter',
     'last_name': 'Fedrizzi',
