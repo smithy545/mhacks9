@@ -131,7 +131,7 @@ LOGIN_REDIRECT_URL = '/memeconomy/profile'
 EMAIL_SUBJECT_PREFIX = '[dev memeconomy] '
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_PASSWORD = 'Yaltastic12'
 EMAIL_HOST_USER = 'smithy545@gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
