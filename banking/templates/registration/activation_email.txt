@@ -1,6 +1,6 @@
-Here the activation key: {{activation_key}}
+Copy paste this link into your browser to activate:
+http://{{site}}/accounts/activate/{{activation_key}}
 
 User: {{user}}
-Site: {{site}}
 
 You must activate in {{expiration_days}} days.
