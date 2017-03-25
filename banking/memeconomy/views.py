@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from . import api
+from .forms import MemeForm
 
 # Create your views here.
 def index(request):
@@ -9,17 +10,16 @@ def profile(request):
 	return render(request, 'memeconomy/profile.html', {})
 
 def create(request):
-	context = {}
+	if request.method == 'POST':	
 
-	return render(request, 'memeconomy/meme.html', context)
+		return render(request, 'memeconomy/meme.html', context)
+	return render(request, 'memeconomy/makememe.html', {})
 
 def buy(request, meme_id):
-	context = {}
 
 	return redirect(view, meme_id)
 
 def sell(request, meme_id):
-	context = {}
 
 	return redirect(view, meme_id)
 
