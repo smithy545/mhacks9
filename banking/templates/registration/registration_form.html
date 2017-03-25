@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="/accounts/register/" method="post">
+	{% csrf_token %}
+	{{ form }}
+	<input type="submit" value="Submit" />
+</form>
+
+<script type="text/javascript">
+	// setup bootstrap formatting
+	$('form > label').each(function(i) {
+		var label = $(this).next('input'),
+			br = label.next('br'),
+			span = br.next('span');
+		$(this).add(label)
+		.add(br)
+		.add(span)
+		.wrapAll('<div class="form-group">');
+	});
+</script>
+
+{% endblock %}

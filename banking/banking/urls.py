@@ -19,5 +19,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^analyze/', include('analyze.urls')),
-    url(r'^memeconomy/', include('memeconomy.urls'))
+    url(r'^memeconomy/', include('memeconomy.urls')),
+    url(r'^accounts/', include('registration.backends.hmac.urls')),
 ]
