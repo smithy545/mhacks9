@@ -530,7 +530,7 @@ def createAccountPurchase(account_id, merchant_id, medium, amount, purchase_date
 	if description != None:
 		payload['description'] = description
 	url = baseUrl + 'accounts/{}/purchases?key={}'.format(account_id, apiKey)
-	response = requests.get(
+	response = requests.post(
 		url,
 		data=json.dumps(payload),
 		headers={'content-type':'application/json'}

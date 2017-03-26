@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-profile
+
+{% if error %}
+<p class="error">{{error}}</p>
+{% endif %}
+
+
+<p>profile</p>
+
+{{trader}}
+
 {% endblock %}

@@ -3,8 +3,9 @@
 {% block content %}
 
 {% if error %}
-{{error}}
+<p class="error">{{error}}</p>
 {% endif %}
+
 
 <form action="{% url 'memeconomy:create' %}" method="post">
 {% csrf_token %}
